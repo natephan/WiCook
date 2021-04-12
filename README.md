@@ -1,2 +1,1 @@
-# wicook
-# wicook
+# WiCook
