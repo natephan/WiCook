@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".login" android:background="#FFA700">
+    <TextView
+            android:text="Fried Chicken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView8"
+            android:textSize="40sp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.497" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.091" android:textColor="#C93737"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/home" android:id="@+id/recipe_home_button"
+            android:background="#00FFFFFF"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955" app:layout_constraintVertical_bias="0.021"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/leftarrow" android:id="@+id/imageButton5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.042"
+            app:layout_constraintVertical_bias="0.022" android:background="#00FFFFFF"/>
+    <TextView
+            android:text="Back"
+            android:layout_width="90dp"
+            android:layout_height="32dp" android:id="@+id/textView12"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.202"
+            app:layout_constraintVertical_bias="0.021" android:textSize="25sp" android:textColor="#C93737"/>
+    <ImageView
+            android:layout_width="138dp"
+            android:layout_height="121dp" app:srcCompat="@drawable/chicken" android:id="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toTopOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"/>
+    <ImageView
+            android:layout_width="342dp"
+            android:layout_height="405dp" app:srcCompat="@drawable/chickeningredients"
+            android:id="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.492" app:layout_constraintVertical_bias="0.751"/>
+    <Button
+            android:text="Add"
+            android:layout_width="96dp"
+            android:layout_height="44dp" android:id="@+id/add_button"
+            android:textAllCaps="false" android:background="#FFFFA1"
+            android:textColor="#C93737" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.206"
+            app:layout_constraintVertical_bias="0.976" android:textSize="30sp"/>
+    <Button
+            android:text="Share"
+            android:layout_width="96dp"
+            android:layout_height="44dp" android:id="@+id/add_button3"
+            android:textAllCaps="false" android:background="#FFFFA1"
+            android:textColor="#C93737" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.777"
+            app:layout_constraintVertical_bias="0.976" android:textSize="30sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
