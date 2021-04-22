@@ -37,13 +37,6 @@ public class explore extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        final ImageButton chicken = (ImageButton) findViewById(R.id.explore_chicken_button);
-        chicken.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(explore.this, recipe.class);
-                startActivity(intent);
-            }
-        });
+        
     }
 }
