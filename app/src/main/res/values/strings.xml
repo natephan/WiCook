@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">WiCook</string>
+
+    <string-array name="recipes">
+        <item>"Fried Chicken"</item>
+        <item>"Cheese Burger"</item>
+        <item>"Hard Shell Taco"</item>
+        <item>"Hot Dog"</item>
+        <item>"Pizza"</item>
+    </string-array>
+
+    <string-array name="Descriptions">
+        <item>"Calories: 2000\n Servings: 4\n 1,000 ratings"</item>
+        <item>"Calories: 1200\n Servings: 2\n 2,450 ratings"</item>
+        <item>"Calories: 800\n Servings: 3\n 670 ratings"</item>
+        <item>"Calories: 650\n Servings: 1\ 620 ratings"</item>
+        <item>"Calories: 1450\n Servings: 6\n 4,450 ratings"</item>
+    </string-array>
+
 </resources>
