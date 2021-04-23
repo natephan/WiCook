@@ -45,5 +45,13 @@ public class explore extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        final ImageButton search = (ImageButton) findViewById(R.id.explore_search_button);
+        search.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(explore.this, search.class);
+                startActivity(intent);
+            }
+        });
     }
 }
