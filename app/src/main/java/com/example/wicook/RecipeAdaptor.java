@@ -1,6 +1,7 @@
 package com.example.wicook;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +42,9 @@ public class RecipeAdaptor extends ArrayAdapter<Recipe> {
 
             recipeImage.setImageResource(recipes.get(position).getRecipeImageId());
             title.setText(recipes.get(position).getRecipeName());
+            title.setTextColor(Color.BLACK);
             description.setText(recipes.get(position).getDescription());
+            description.setTextColor(Color.BLACK);
             rating.setImageResource(recipes.get(position).getRecipeRating());
 
 
