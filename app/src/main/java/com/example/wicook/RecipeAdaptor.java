@@ -2,34 +2,30 @@ package com.example.wicook;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class RecipeAdaptor extends ArrayAdapter<Recipe> implements Filterable {
         private ArrayList<Recipe> recipes;
-        private ArrayList<Recipe> filteredRecipes;
+        private ArrayList<Recipe> orignalRecipes;
         private Context mContext;
 
     public RecipeAdaptor(@NonNull Context context, ArrayList<Recipe> recipes) {
         super(context,  R.layout.recipe_items, recipes);
         this.recipes = recipes;
-        this.filteredRecipes = recipes;
+        orignalRecipes = new ArrayList<>(recipes);
         this.mContext = context;
     }
 
@@ -61,13 +57,13 @@ public class RecipeAdaptor extends ArrayAdapter<Recipe> implements Filterable {
 
         @Override
         public int getCount() {
-            return filteredRecipes.size();
+            return recipes.size();
         }
 
         @Nullable
         @Override
         public Recipe getItem(int position) {
-            return filteredRecipes.get(position);
+            return recipes.get(position);
         }
 
         @Override
@@ -85,14 +81,14 @@ public class RecipeAdaptor extends ArrayAdapter<Recipe> implements Filterable {
                     FilterResults results = new FilterResults();
 
                     if(constraint == null || constraint.length() == 0) {
-                        results.count = recipes.size();
-                        results.values = recipes;
+                        results.count = orignalRecipes.size();
+                        results.values = orignalRecipes;
                     }
                     else {
                         ArrayList<Recipe> filteredResults = new ArrayList<>();
                         String filterString = constraint.toString().toLowerCase();
 
-                        for (Recipe r : recipes) {
+                        for (Recipe r : orignalRecipes) {
                             if (r.getRecipeName().toLowerCase().contains(filterString)){
                                 filteredResults.add(r);
                             }
@@ -108,17 +104,13 @@ public class RecipeAdaptor extends ArrayAdapter<Recipe> implements Filterable {
                 @Override
                 protected void publishResults(CharSequence constraint, FilterResults results) {
 
-                    if (results.count ==0) {
-                        notifyDataSetInvalidated();
-                    } else {
-                        filteredRecipes = (ArrayList<Recipe>) results.values;
-
-                        notifyDataSetChanged();
-                        clear();
-                        for (Recipe r : filteredRecipes) {
-                            add(r);
-                        }
+                    ArrayList<Recipe> temp = (ArrayList<Recipe>) results.values;
+                    notifyDataSetChanged();
+                    clear();
+                    for (Recipe r : temp) {
+                        add(r);
                     }
+
 
                 }
             };
