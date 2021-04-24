@@ -15,9 +15,9 @@ public class login extends AppCompatActivity {
 
     protected static ArrayList<Recipe> allRecipes = new ArrayList<Recipe>() {{
         add(new Recipe("Chicken", "good", R.drawable.chicken, R.drawable.plus));
-        add(new Recipe("Fried Chicken", "good", R.drawable.chicken, R.drawable.plus));
-        add(new Recipe("Grilled Chicken", "good", R.drawable.chicken, R.drawable.plus));
-        add(new Recipe("Chicken Tenders", "good", R.drawable.chicken, R.drawable.plus));
+        add(new Recipe("HotDog", "good", R.drawable.chicken, R.drawable.plus));
+        add(new Recipe("Pizza", "good", R.drawable.chicken, R.drawable.plus));
+        add(new Recipe("Burger", "good", R.drawable.chicken, R.drawable.plus));
     }};
 
     @Override

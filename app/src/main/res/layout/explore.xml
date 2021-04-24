@@ -63,11 +63,12 @@
 
     <ListView
         android:id="@+id/exploreListView"
-        android:layout_width="387dp"
-        android:layout_height="481dp"
+        android:layout_width="375dp"
+        android:layout_height="480dp"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBarExplore" />
 
     <LinearLayout
         android:layout_width="match_parent"

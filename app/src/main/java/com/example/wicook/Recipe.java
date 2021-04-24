@@ -1,12 +1,12 @@
 package com.example.wicook;
 
-public class Recipe {
-    private String recipeName;
-    private String description;
-    private int recipeImageId;
-    private int recipeRating;
+public class Recipe{
+    private final String recipeName;
+    private final String description;
+    private final int recipeImageId;
+    private final int recipeRating;
 
-    public Recipe(String recipeName, String description, int recipeImageId, int recipeRating) {
+    public Recipe(String recipeName, String description, int recipeImageId, int recipeRating){
         this.recipeName = recipeName;
         this.description = description;
         this.recipeImageId = recipeImageId;

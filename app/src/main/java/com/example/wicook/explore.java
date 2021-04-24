@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 
 public class explore extends AppCompatActivity {
     private ImageButton exploreBtn;
+    private SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,8 @@ public class explore extends AppCompatActivity {
 
         exploreBtn = (ImageButton) findViewById(R.id.EnavExplorBtn);
         exploreBtn.setBackgroundColor(Color.parseColor("#816DA5"));
+
+        searchView = (SearchView) findViewById(R.id.searchBarExplore);
 
 
         RecipeAdaptor adaptor = new RecipeAdaptor(getApplicationContext(), login.allRecipes);
@@ -34,6 +38,21 @@ public class explore extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast t = Toast.makeText(explore.this, "Clicked on: "+parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT);
                 t.show();
+            }
+        });
+
+
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                adaptor.getFilter().filter(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
             }
         });
 
