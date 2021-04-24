@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:background="#2196F3"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/recipeName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#D3F1F4"
+            android:gravity="center"
+            android:text="Recipe Name"
+            android:textSize="36sp" />
+
+        <ImageButton
+            android:id="@+id/recipeImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="#2B2B2B"
+            app:srcCompat="@drawable/chicken" />
+
+        <TextView
+            android:id="@+id/recipeQuickDesc"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#D3F1F4"
+            android:text="Small Decripiton" />
+
+        <ImageView
+            android:id="@+id/recipeRating"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_margin="20dp"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.wicook">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.wicook">
 
     <application
             android:allowBackup="true"
@@ -30,14 +31,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".explore">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+        <activity android:name=".explore" android:windowSoftInputMode="adjustPan">
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <activity android:name=".recipe">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
