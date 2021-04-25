@@ -39,7 +39,7 @@ public class RecipeAdaptor extends ArrayAdapter<Recipe> implements Filterable {
                     (R.layout.recipe_items, parent, false);
         }
 
-        ImageButton recipeImage = convertView.findViewById(R.id.recipeImage);
+        ImageView recipeImage = convertView.findViewById(R.id.recipeImage);
         TextView title = convertView.findViewById(R.id.recipeName);
         TextView description = convertView.findViewById(R.id.recipeQuickDesc);
         ImageView rating = convertView.findViewById(R.id.recipeRating);

@@ -1,8 +1,6 @@
 package com.example.wicook;
 
 import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.Color;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
@@ -11,8 +9,6 @@ import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
 
 
 public class explore extends AppCompatActivity {
@@ -24,8 +20,8 @@ public class explore extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.explore);
 
-        exploreBtn = (ImageButton) findViewById(R.id.EnavExplorBtn);
-        exploreBtn.setBackgroundColor(Color.parseColor("#816DA5"));
+        exploreBtn = (ImageButton) findViewById(R.id.pageExplorBtn);
+        exploreBtn.setBackgroundResource(R.color.purple_500);
 
         searchView = (SearchView) findViewById(R.id.searchBarExplore);
 
@@ -36,8 +32,8 @@ public class explore extends AppCompatActivity {
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast t = Toast.makeText(explore.this, "Clicked on: "+parent.getItemAtPosition(position).toString(), Toast.LENGTH_SHORT);
-                t.show();
+                Intent intent = new Intent(explore.this, RecipePage.class);
+                startActivity(intent);
             }
         });
 
@@ -56,7 +52,7 @@ public class explore extends AppCompatActivity {
             }
         });
 
-        final ImageButton navHome = (ImageButton) findViewById(R.id.EnavHomeBtn);
+        final ImageButton navHome = (ImageButton) findViewById(R.id.pageHomeBtn);
         navHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,13 +62,13 @@ public class explore extends AppCompatActivity {
             }
         });
 
-        final ImageButton navSocial = (ImageButton) findViewById(R.id.EnavSocialBtn);
+        final ImageButton navSocial = (ImageButton) findViewById(R.id.pageSocialBtn);
         navSocial.setOnClickListener(e-> {
             Intent intent = new Intent(explore.this, social.class);
             startActivity(intent);
         });
 
-        final ImageButton navBook = (ImageButton) findViewById(R.id.EnavCBookBtn);
+        final ImageButton navBook = (ImageButton) findViewById(R.id.pageCBookBtn);
         navBook.setOnClickListener(e-> {
             Intent intent = new Intent(explore.this, cookbook.class);
             startActivity(intent);

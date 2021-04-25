@@ -81,7 +81,7 @@
         app:layout_constraintTop_toTopOf="@+id/view">
 
         <ImageButton
-            android:id="@+id/EnavHomeBtn"
+            android:id="@+id/pageHomeBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -89,7 +89,7 @@
             app:srcCompat="@drawable/homeorange" />
 
         <ImageButton
-            android:id="@+id/EnavSocialBtn"
+            android:id="@+id/pageSocialBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -97,16 +97,16 @@
             app:srcCompat="@drawable/socialicon" />
 
         <ImageButton
-            android:id="@+id/EnavExplorBtn"
+            android:id="@+id/pageExplorBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#673AB7"
+            android:background="@color/regularPurple"
             android:clickable="false"
             app:srcCompat="@drawable/exploreicon" />
 
         <ImageButton
-            android:id="@+id/EnavCBookBtn"
+            android:id="@+id/pageCBookBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -114,7 +114,7 @@
             app:srcCompat="@drawable/cookbookicon" />
 
         <ImageButton
-            android:id="@+id/EnavNotiBtn"
+            android:id="@+id/pageNotiBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
