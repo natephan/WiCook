@@ -15,53 +15,5 @@ public class cookbook extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cookbook);
 
-        final ImageButton home = (ImageButton) findViewById(R.id.home_nav);
-        home.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(cookbook.this, home.class);
-                startActivity(intent);
-            }
-        });
-
-        final ImageButton explore_button = (ImageButton) findViewById(R.id.explore_nav);
-        explore_button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(cookbook.this, explore.class);
-                startActivity(intent);
-            }
-        });
-
-        final ImageButton social_button = (ImageButton) findViewById(R.id.social_nav);
-        social_button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(cookbook.this, social.class);
-                startActivity(intent);
-            }
-        });
-
-        final ImageButton settings = (ImageButton) findViewById(R.id.settings_button);
-        settings.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(cookbook.this, settings.class);
-                startActivity(intent);
-            }
-        });
-
-        final Button meatButton = (Button) findViewById(R.id.meat_button);
-        meatButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(cookbook.this, meat.class);
-                startActivity(intent);
-            }
-        });
-
-        final TextView history = (TextView) findViewById(R.id.history_tab);
-        history.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(cookbook.this, history.class);
-                startActivity(intent);
-            }
-        });
-
     }
 }

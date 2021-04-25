@@ -10,10 +10,13 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 
 public class explore extends AppCompatActivity {
     private ImageButton exploreBtn;
     private SearchView searchView;
+    private ArrayList<Recipe> list = new ArrayList<>(login.allRecipes);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,13 +29,22 @@ public class explore extends AppCompatActivity {
         searchView = (SearchView) findViewById(R.id.searchBarExplore);
 
 
-        RecipeAdaptor adaptor = new RecipeAdaptor(getApplicationContext(), login.allRecipes);
+        RecipeAdaptor adaptor = new RecipeAdaptor(getApplicationContext(), list);
         ListView listview = findViewById(R.id.exploreListView);
         listview.setAdapter(adaptor);
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Recipe r = login.allRecipes.get(position);
+
                 Intent intent = new Intent(explore.this, RecipePage.class);
+                intent.putExtra("R_NAME", r.getRecipeName());
+                intent.putExtra("R_DESC", r.getDescription());
+                intent.putExtra("R_INST", r.getInstructions());
+                intent.putExtra("R_INGR", r.getIngredients());
+                intent.putExtra("R_INFO", r.getInformation());
+                intent.putExtra("R_ID", r.id);
                 startActivity(intent);
             }
         });

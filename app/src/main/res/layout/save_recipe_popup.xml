@@ -35,7 +35,8 @@
             android:background="@color/white"
             android:ems="10"
             android:inputType="text|textAutoComplete"
-            android:text="Name" />
+            android:text="Category Name"
+            android:textColor="#050000" />
 
         <TextView
             android:id="@+id/textView17"
@@ -58,7 +59,8 @@
             android:background="@color/white"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Tag name"
+            android:textColor="@color/black" />
 
         <LinearLayout
             android:layout_width="wrap_content"

@@ -9,12 +9,43 @@
         <item>"Pizza"</item>
     </string-array>
 
-    <string-array name="Descriptions">
+    <string-array name="smallDescriptions">
         <item>"Calories: 2000\n Servings: 4\n 1,000 ratings"</item>
         <item>"Calories: 1200\n Servings: 2\n 2,450 ratings"</item>
         <item>"Calories: 800\n Servings: 3\n 670 ratings"</item>
         <item>"Calories: 650\n Servings: 1\ 620 ratings"</item>
         <item>"Calories: 1450\n Servings: 6\n 4,450 ratings"</item>
     </string-array>
+
+    <string-array name="largeDescriptions">
+        <item>"Calories: 2000\n Servings: 4\n Protein: 42g\n Fat: 30g\n Sugar: 2g\n 1,000 ratings"</item>
+        <item>"Calories: 1200\n Servings: 2\n Protein: 30g\n Fat: 12g\n Sugar: 1g\n 2,450 ratings"</item>
+        <item>"Calories: 800\n Servings: 3\n Protein: 12g\n Fat: 23g\n Sugar: 1.5g\n 670 ratings"</item>
+        <item>"Calories: 650\n Servings: 1\n Protein: 14g\n Fat: 15g\n Sugar: 0.5g\n 840 ratings"</item>
+        <item>"Calories: 1450\n Servings: 6\n Protein: 2g\n Fat: 36g\n Sugar: 2.3g\n 4,450 ratings"</item>
+    </string-array>
+    
+    <string-array name="Instructions">
+        <item>
+            "1. In a large mixing bowl, whisk together buttermilk,\n
+            hot sauce (optional, for added flavor), salt, and pepper in a mixing bowl.\n
+            2. Pour the vegetable oil in a skillet until it is about 3/4 inch deep. Heat to 350 degrees. \n
+            3. Prepare the breading by combining the flour, cornstarch,\n
+            onion powder, garlic powder, oregano, basil, white pepper, cayenne pepper, paprika, and salt.\n
+            4. Mix it thoroughly. Place the breaded chicken into the 350 degree oil. Fry each piece for 14 minutes."
+        </item>
+    </string-array>
+
+    <string-array name="Ingredients">
+        <item>
+            "* 6 chicken thighs\n* 3 cups buttermilk\n* 1/2 cup Buffalo Hot Sauce (optional)\n
+             * 2 teaspoons salt\n* 1 teaspoon pepper
+            "
+        </item>
+    </string-array>
+
+
+
+    <string name="savedBtn">"SAVED</string>
 
 </resources>
