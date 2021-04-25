@@ -79,13 +79,13 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/saveRecipeBtn"
+                android:id="@+id/addRecipeBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@color/regularPurple"
-                android:text="SAVE"
+                android:text="ADD"
                 android:textColor="@color/white" />
 
             <Button
