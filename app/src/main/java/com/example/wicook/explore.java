@@ -33,7 +33,7 @@ public class explore extends AppCompatActivity {
         final ImageButton cookbook = (ImageButton) findViewById(R.id.explore_cookbook_button);
         cookbook.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(explore.this, cookbook.class);
+                Intent intent = new Intent(explore.this, cookBookCategory.class);
                 startActivity(intent);
             }
         });

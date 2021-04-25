@@ -17,8 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class search extends AppCompatActivity {
-//    private ArrayList<recipeName> recipeNamesList;
-//    private RecyclerView recyclerView;
+
     SearchView m_searchView;
     ListView m_recipeList;
     ArrayList<String> recipeNamesList;
@@ -65,24 +64,6 @@ public class search extends AppCompatActivity {
             }
         });
 
-//        recyclerView = findViewById(R.id.recyclerView);
-//        recipeNamesList = new ArrayList<>();
-//        setRecipeNamesList();
-//        setAdapter();
-
     } // end of onCreate
-//    private void setAdapter(){
-//        recyclerAdapter adapter = new recyclerAdapter(recipeNamesList);
-//        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-//        recyclerView.setLayoutManager(layoutManager);
-//        recyclerView.setItemAnimator(new DefaultItemAnimator());
-//        recyclerView.setAdapter(adapter);
-//    }
-//    private void setRecipeNamesList(){
-//        recipeNamesList.add(new recipeName("Burger"));
-//        recipeNamesList.add(new recipeName("Burger"));
-//        recipeNamesList.add(new recipeName("Shrimp"));
-//        recipeNamesList.add(new recipeName("Grilled Fish"));
-//        recipeNamesList.add(new recipeName("Salmon"));
-//    }
+
 }

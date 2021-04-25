@@ -11,27 +11,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b32439d-a3e2-4a64-a6d9-63f85cf5ad69" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/wicook/CategoryAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/wicook/CategoryList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/wicook/cookBookCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/wicook/newCookBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_add.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_close.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_category.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/cookbook_activity.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/row_add_categories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/row_categories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/wicook/recipeName.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/wicook/recipeName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/wicook/recyclerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/wicook/recyclerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/wicook/explore.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/wicook/explore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/wicook/search.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/wicook/search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_recipes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/list_recipes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/search_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/search_activity.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_3_XL_API_28_P1]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -52,8 +63,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="layoutResourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -70,8 +81,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3_XL_API_28_P1" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-04-23T00:15:10.855Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-04-25T16:57:03.868Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
@@ -156,18 +168,18 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="558" y="208" key="#com.intellij.ide.util.MemberChooser" timestamp="1619134629815">
+    <state x="558" y="208" key="#com.intellij.ide.util.MemberChooser" timestamp="1619373489292">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state x="558" y="208" key="#com.intellij.ide.util.MemberChooser/0.0.1504.1003@0.0.1504.1003" timestamp="1619134629815" />
-    <state x="100" y="100" width="1304" height="803" key="AVDManager" timestamp="1619137112440">
+    <state x="558" y="208" key="#com.intellij.ide.util.MemberChooser/0.0.1504.1003@0.0.1504.1003" timestamp="1619373489292" />
+    <state x="100" y="100" width="1304" height="803" key="AVDManager" timestamp="1619370204872">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state x="100" y="100" width="1304" height="803" key="AVDManager/0.0.1504.1003@0.0.1504.1003" timestamp="1619137112440" />
-    <state x="333" y="257" key="AndroidCreateResourceFileDialog" timestamp="1619136049212">
+    <state x="100" y="100" width="1304" height="803" key="AVDManager/0.0.1504.1003@0.0.1504.1003" timestamp="1619370204872" />
+    <state x="333" y="257" key="AndroidCreateResourceFileDialog" timestamp="1619373106008">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
-    <state x="333" y="257" key="AndroidCreateResourceFileDialog/0.0.1504.1003@0.0.1504.1003" timestamp="1619136049212" />
+    <state x="333" y="257" key="AndroidCreateResourceFileDialog/0.0.1504.1003@0.0.1504.1003" timestamp="1619373106008" />
     <state width="1444" height="225" key="GridCell.Tab.0.bottom" timestamp="1619223800224">
       <screen x="0" y="0" width="1504" height="1003" />
     </state>
