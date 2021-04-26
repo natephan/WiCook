@@ -28,6 +28,8 @@ public class explore extends AppCompatActivity {
 
         searchView = (SearchView) findViewById(R.id.searchBarExplore);
 
+        ImageButton filterButton = (ImageButton) findViewById(R.id.filterExploreBtn);
+
         RecipeAdaptor adaptor = new RecipeAdaptor(getApplicationContext(), list);
         ListView listview = findViewById(R.id.exploreListView);
         listview.setAdapter(adaptor);
@@ -84,6 +86,15 @@ public class explore extends AppCompatActivity {
             Intent intent = new Intent(explore.this, cookbook.class);
             startActivity(intent);
         });
+
+        filterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(explore.this, filter.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 }
