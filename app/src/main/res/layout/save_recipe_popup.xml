@@ -19,6 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="bottom"
             android:text="Category:"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -34,8 +35,8 @@
             android:layout_weight="1"
             android:background="@color/white"
             android:ems="10"
+            android:hint="Enter category name"
             android:inputType="text|textAutoComplete"
-            android:text="Category Name"
             android:textColor="#050000" />
 
         <TextView
@@ -43,6 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="bottom"
             android:text="Tags:"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -58,8 +60,8 @@
             android:layout_weight="1"
             android:background="@color/white"
             android:ems="10"
+            android:hint="Enter tag (optional)"
             android:inputType="textPersonName"
-            android:text="Tag name"
             android:textColor="@color/black" />
 
         <LinearLayout

@@ -65,5 +65,6 @@ public class login extends AppCompatActivity {
         allRecipes.get(0).setInstructions(instructions[0]);
         allRecipes.get(0).setIngredients(ingredients[0]);
         allRecipes.get(0).setInformation(info[0]);
+        allRecipes.get(0).setCategory("favorites");
     }
 }

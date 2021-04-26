@@ -38,13 +38,16 @@ public class RecipePage extends AppCompatActivity {
         int id = getIntent().getIntExtra("R_ID", 0);
         String r_name = getIntent().getStringExtra("R_NAME");
 
-        int isSaved = getIntent().getIntExtra("IS_SAVED", 0);
+
 
         Button addBtn = (Button) findViewById(R.id.addRecipeBtn);
-        if (isSaved == 1) {
+
+
+        if (login.allRecipes.get(id-1).isSaved) {
             addBtn.setBackgroundColor(0xFFBB86FC);
             addBtn.setText(R.string.savedBtn);
             addBtn.setEnabled(false);
+
         }
 
         addBtn.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +83,12 @@ public class RecipePage extends AppCompatActivity {
         final ImageButton navBook = (ImageButton) findViewById(R.id.pageCBookBtn);
         navBook.setOnClickListener(e-> {
             Intent intent = new Intent(RecipePage.this, cookbook.class);
+            startActivity(intent);
+        });
+
+        final ImageButton navExplore = (ImageButton) findViewById(R.id.pageExplorBtn);
+        navExplore.setOnClickListener(e->{
+            Intent intent = new Intent(RecipePage.this, explore.class);
             startActivity(intent);
         });
 

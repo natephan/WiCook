@@ -10,6 +10,7 @@ public class Recipe{
     private String ingredients;
     private String information;
     public int id;
+    public boolean isSaved;
 
     public Recipe(String recipeName, String description, int recipeImageId, int recipeRating, int id){
         this.recipeName = recipeName;
@@ -18,6 +19,7 @@ public class Recipe{
         this.recipeRating = recipeRating;
         this.category = "";
         this.id = id;
+        this.isSaved = false;
     }
 
     public String getRecipeName() {

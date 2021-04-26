@@ -26,7 +26,7 @@ public class SaveRecipeWindow extends AppCompatActivity {
         int w = metrics.widthPixels;
         int h = metrics.heightPixels;
 
-        getWindow().setLayout((int) (w*.5), (int) (h*.5));
+        getWindow().setLayout((int) (w*.6), (int) (h*.5));
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;
@@ -68,7 +68,8 @@ public class SaveRecipeWindow extends AppCompatActivity {
                     intent.putExtra("R_INST", r_inst);
                     intent.putExtra("R_INGR", r_ingr);
                     intent.putExtra("R_INFO", r_desc);
-                    intent.putExtra("IS_SAVED", 1);
+                    intent.putExtra("R_ID", id);
+                    login.allRecipes.get(id-1).isSaved = true;
                     startActivity(intent);
 
                 }
@@ -79,6 +80,11 @@ public class SaveRecipeWindow extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SaveRecipeWindow.this, RecipePage.class);
+                intent.putExtra("R_NAME", r_name);
+                intent.putExtra("R_INST", r_inst);
+                intent.putExtra("R_INGR", r_ingr);
+                intent.putExtra("R_INFO", r_desc);
+                intent.putExtra("R_ID", id);
                 startActivity(intent);
             }
         });

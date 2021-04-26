@@ -24,7 +24,7 @@
         <item>"Calories: 650\n Servings: 1\n Protein: 14g\n Fat: 15g\n Sugar: 0.5g\n 840 ratings"</item>
         <item>"Calories: 1450\n Servings: 6\n Protein: 2g\n Fat: 36g\n Sugar: 2.3g\n 4,450 ratings"</item>
     </string-array>
-    
+
     <string-array name="Instructions">
         <item>
             "1. In a large mixing bowl, whisk together buttermilk,\n
@@ -43,7 +43,6 @@
             "
         </item>
     </string-array>
-
 
 
     <string name="savedBtn">"SAVED</string>

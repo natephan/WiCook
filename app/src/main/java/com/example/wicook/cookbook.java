@@ -2,6 +2,7 @@ package com.example.wicook;
 
 import android.content.Intent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -25,7 +26,16 @@ public class cookbook extends AppCompatActivity {
         CategoryAdapter adapter = new CategoryAdapter(getApplicationContext(), login.allCatergories);
         catListView.setAdapter(adapter);
 
-        //todo: add on click listener to listview items
+
+        catListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String category = login.allCatergories.get(position);
+                Intent intent = new Intent(cookbook.this, CategoryPage.class);
+                intent.putExtra("CAT_NAME", category);
+                startActivity(intent);
+            }
+        });
 
         final EditText catName = (EditText) findViewById(R.id.catInputText);
         final Button addCatBtn = (Button) findViewById(R.id.addCatBtn);
@@ -35,6 +45,8 @@ public class cookbook extends AppCompatActivity {
                 String s = catName.getText().toString();
                 login.allCatergories.add(s);
                 adapter.notifyDataSetChanged();
+
+                catName.setText("");
             }
         });
 
@@ -56,9 +68,16 @@ public class cookbook extends AppCompatActivity {
 
         final ImageButton navBook = (ImageButton) findViewById(R.id.pageExplorBtn);
         navBook.setOnClickListener(e-> {
-            Intent intent = new Intent(cookbook.this, cookbook.class);
+            Intent intent = new Intent(cookbook.this, explore.class);
             startActivity(intent);
         });
+
+        final ImageButton settings = (ImageButton) findViewById(R.id.settingCookBookBtn);
+        settings.setOnClickListener(e->{
+            Intent intent = new Intent(cookbook.this, settings.class);
+            startActivity(intent);
+        });
+
 
     }
 }
