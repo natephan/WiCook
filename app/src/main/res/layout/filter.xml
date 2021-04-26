@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightPurple">
+
+    <ScrollView
+        android:id="@+id/filter_view"
+        app:layout_constraint="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <ImageButton
+                    android:id="@+id/filter_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/leftarrow"
+                    android:background="@color/lightPurple"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:text="Filter Search"
+                    android:textSize="35dp">
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:text="Keywords"
+                    android:textSize="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp">
+
+                </TextView>
+                <SearchView
+                    android:layout_width="270dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/white">
+                </SearchView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:text="Exclude"
+                    android:textSize="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="30dp">
+
+                </TextView>
+                <SearchView
+                    android:layout_width="270dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/white">
+                </SearchView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:text="Allergies"
+                    android:textSize="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_marginTop="30dp">
+
+                </TextView>
+                <SearchView
+                    android:layout_width="270dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/white">
+                </SearchView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:text="Price"
+                    android:textSize="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="43dp"
+                    android:layout_marginTop="30dp">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/price_text"
+                    android:layout_width="50dp"
+                    android:layout_height="30sp"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/white"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="0"></EditText>
+                <SeekBar
+                    android:id="@+id/price_seeker"
+                    android:layout_width="250dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="25dp"></SeekBar>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:text="Calories"
+                    android:textSize="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/cal_text"
+                    android:layout_width="50dp"
+                    android:layout_height="30sp"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/white"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="0"></EditText>
+                <SeekBar
+                    android:id="@+id/cal_seeker"
+                    android:layout_width="250dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="25dp"></SeekBar>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:text="Time"
+                    android:textSize="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="44dp"
+                    android:layout_marginTop="30dp">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/time_text"
+                    android:layout_width="50dp"
+                    android:layout_height="30sp"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/white"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="0"></EditText>
+                <SeekBar
+                    android:id="@+id/time_seeker"
+                    android:layout_width="250dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="25dp"></SeekBar>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:text="Servings"
+                    android:textSize="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="44dp"
+                    android:layout_marginTop="30dp">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/servings_box"
+                    android:layout_width="60dp"
+                    android:layout_height="45sp"
+                    android:background="@color/white"
+                    android:layout_marginTop="25dp"
+                    android:text="1"
+                    android:gravity="right"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textSize="30dp"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/filter_reset"
+                    android:layout_height="75dp"
+                    android:layout_width="150dp"
+                    android:text="Reset"
+                    android:textSize="35dp"
+                    android:layout_marginTop="90dp"
+                    android:layout_marginLeft="25dp">
+                </Button>
+
+                <Button
+                    android:id="@+id/filter_save"
+                    android:layout_height="75dp"
+                    android:layout_width="150dp"
+                    android:text="Save"
+                    android:textSize="35dp"
+                    android:layout_marginTop="90dp"
+                    android:layout_marginLeft="60dp">
+                </Button>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
