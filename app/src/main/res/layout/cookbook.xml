@@ -1,128 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login" android:background="#FFA700">
-    <Button
-        android:text="Fish"
-        android:layout_width="314dp"
-        android:layout_height="114dp" android:id="@+id/cookbook_button3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/view" app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintVertical_bias="0.805" android:textAllCaps="false" android:textSize="40sp"
-        android:background="#FFFFA1" android:textColor="#C93737"/>
-    <Button
-        android:text="Vegan"
-        android:layout_width="314dp"
-        android:layout_height="114dp" android:id="@+id/Vegan"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/view" app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintVertical_bias="0.591" android:textAllCaps="false" android:textSize="40sp"
-        android:background="#FFFFA1" android:textColor="#C93737"/>
-    <Button
-        android:text="Meat Lovers"
-        android:layout_width="314dp"
-        android:layout_height="114dp" android:id="@+id/meat_button"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/view" app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintVertical_bias="0.371" android:textAllCaps="false" android:textSize="40sp"
-        android:background="#FFFFA1" android:textColor="#C93737"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="88dp" android:id="@+id/view"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="1.0" android:background="#FFFFA1"/>
-    <TextView
-        android:text="MyCookbook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:id="@+id/textView8"
-        android:textSize="46sp" app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/view" app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintVertical_bias="0.017"
-        android:textColor="#C93737" app:layout_constraintHorizontal_bias="0.112"/>
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" app:srcCompat="@drawable/settings" android:id="@+id/settings_button"
-        android:background="#00FFFFFF"
-        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.955" app:layout_constraintVertical_bias="0.023"/>
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="88dp" app:srcCompat="@drawable/notification"
-        android:id="@+id/notif_nav"
-        android:background="#00FFFFFF"
-        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="1.0"/>
-    <ImageButton
-        android:layout_width="104dp"
-        android:layout_height="87dp" app:srcCompat="@drawable/homeorange" android:id="@+id/home_nav"
-        android:background="#00FFFFFF"
-        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.998"/>
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="88dp" app:srcCompat="@drawable/cookbookicon"
-        android:id="@+id/social_nav"
-        android:background="#00FFFFFF"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.334"
-        app:layout_constraintVertical_bias="1.0" android:layout_marginLeft="5dp" android:layout_marginStart="5dp"/>
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="88dp" app:srcCompat="@drawable/exploreicon"
-        android:id="@+id/explore_nav"
-        android:background="#00FFFFFF"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.678"
-        app:layout_constraintVertical_bias="1.0" android:layout_marginRight="6dp" android:layout_marginEnd="6dp"/>
-    <View
-        android:layout_width="209dp"
-        android:layout_height="72dp" android:id="@+id/view2"
-        android:background="#000000"
-        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.11"
-        android:layout_marginTop="2dp"/>
-    <TextView
-        android:text="Cookbook"
-        android:layout_width="205dp"
-        android:layout_height="68dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/view" app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.116" android:textColor="#C93737" android:textSize="40dp"
-        android:clickable="true" android:gravity="center" android:background="#FFE500"
-        android:id="@+id/textView16" android:layout_marginLeft="1dp" android:layout_marginStart="1dp"
-        android:layout_marginBottom="2dp"/>
-    <TextView
-        android:text="History"
-        android:layout_width="203dp"
-        android:layout_height="68dp" android:id="@+id/history_tab"
-        android:background="#FFFFA1" android:textSize="40sp"
-        android:gravity="center" app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/view" app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintVertical_bias="0.117" android:clickable="true"/>
-    <SearchView
-        android:layout_width="314dp"
-        android:layout_height="29dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/view" app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintVertical_bias="0.249" android:inputType="text" android:queryHint="Search Cookbook"
-        android:background="#FFFFFF"/>
+    android:background="@color/lightPurple"
+    tools:context=".login">
 
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="262dp"
+        android:layout_height="74dp"
+        android:gravity="center"
+        android:text="MyCookBook"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/lightPurple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/settings" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_margin="0dp"
+        android:background="@color/regularPurple"
+        android:gravity="center"
+        android:text="CATEGORIES"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <ListView
+        android:id="@+id/categoryListV"
+        android:layout_width="0dp"
+        android:layout_height="388dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/lightPurple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19">
+
+    </ListView>
+
+    <EditText
+        android:id="@+id/catInputText"
+        android:layout_width="235dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Enter new catergory name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryListV" />
+
+    <Button
+        android:id="@+id/addCatBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/regularPurple"
+        android:text="Add Category"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toEndOf="@+id/catInputText"
+        app:layout_constraintTop_toBottomOf="@+id/categoryListV" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#673AB7"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="28dp">
+
+        <ImageButton
+            android:id="@+id/pageHomeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#673AB7"
+            app:srcCompat="@drawable/homeorange" />
+
+        <ImageButton
+            android:id="@+id/pageSocialBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#673AB7"
+            app:srcCompat="@drawable/socialicon" />
+
+        <ImageButton
+            android:id="@+id/pageExplorBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/regularPurple"
+            android:clickable="false"
+            app:srcCompat="@drawable/exploreicon" />
+
+        <ImageButton
+            android:id="@+id/pageCBookBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/regularPurple"
+            app:srcCompat="@drawable/cookbookicon" />
+
+        <ImageButton
+            android:id="@+id/pageNotiBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#673AB7"
+            app:srcCompat="@drawable/notification" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

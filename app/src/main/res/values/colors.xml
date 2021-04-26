@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lightPurple">#CBC3E3</color>
     <color name="regularPurple">#673AB7</color>
+    <color name="activeMenu">#34176A</color>
 
 
 </resources>

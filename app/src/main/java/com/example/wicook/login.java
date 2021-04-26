@@ -24,6 +24,12 @@ public class login extends AppCompatActivity {
                 R.drawable.plus, 4));
     }};
 
+    protected static ArrayList<String> allCatergories = new ArrayList<String>(){
+        {
+            add(new String("Favorites"));
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

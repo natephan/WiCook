@@ -24,10 +24,9 @@ public class explore extends AppCompatActivity {
         setContentView(R.layout.explore);
 
         exploreBtn = (ImageButton) findViewById(R.id.pageExplorBtn);
-        exploreBtn.setBackgroundResource(R.color.purple_500);
+        exploreBtn.setBackgroundResource(R.color.activeMenu);
 
         searchView = (SearchView) findViewById(R.id.searchBarExplore);
-
 
         RecipeAdaptor adaptor = new RecipeAdaptor(getApplicationContext(), list);
         ListView listview = findViewById(R.id.exploreListView);
