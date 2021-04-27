@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="304dp"
+    android:layout_height="254dp"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="@color/lightPurple">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/feed_item_pic"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@color/lightPurple"
+                app:srcCompat="@drawable/socialicon"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="false"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/feed_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friend 1 shared a recipe with you!"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/lightPurple"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/like_button"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#FFFFD98E"
+            android:text="Like"
+            android:textColor="#000000" />
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:text="View"
+            android:backgroundTint="#FFFFD98E"
+            android:textColor="#000000" />
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:text="Share"
+            android:backgroundTint="#FFFFD98E"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+</LinearLayout>
