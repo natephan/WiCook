@@ -2,6 +2,7 @@ package com.example.wicook;
 
 import android.content.Intent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -32,7 +33,14 @@ public class friends extends AppCompatActivity {
         friendsAdapter adapter = new friendsAdapter(getApplicationContext(), friendNames);
         friendsList.setAdapter(adapter);
 
-
+        ImageButton addFriend = (ImageButton) findViewById(R.id.add_friend_button);
+        addFriend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(friends.this, addFriend.class);
+                startActivity(intent);
+            }
+        });
 
         final Button feedTab = (Button) findViewById(R.id.feed_tab);
         feedTab.setOnClickListener(new View.OnClickListener() {
