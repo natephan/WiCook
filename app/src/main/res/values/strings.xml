@@ -45,6 +45,6 @@
     </string-array>
 
 
-    <string name="savedBtn">"SAVED</string>
+    <string name="removeText">"REMOVE"</string>
 
 </resources>

@@ -59,6 +59,7 @@ public class CategoryPage extends AppCompatActivity {
                 intent.putExtra("R_INGR", r.getIngredients());
                 intent.putExtra("R_INFO", r.getInformation());
                 intent.putExtra("R_ID", r.id);
+                intent.putExtra("R_CLASS", "CategoryPage");
                 startActivity(intent);
             }
         });
