@@ -30,6 +30,7 @@ public class social extends AppCompatActivity {
         final ImageButton navSocial= (ImageButton) findViewById(R.id.pageSocialBtn);
         navSocial.setBackgroundResource(R.color.activeMenu);
 
+
         ListView feed = (ListView) findViewById(R.id.feed_list_view);
         feedAdapter adapter = new feedAdapter(getApplicationContext(), friendNames);
         feed.setAdapter(adapter);
