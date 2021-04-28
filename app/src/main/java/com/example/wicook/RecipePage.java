@@ -41,6 +41,7 @@ public class RecipePage extends AppCompatActivity {
 
 
         Button addBtn = (Button) findViewById(R.id.addRecipeBtn);
+        Button shareBtn = (Button) findViewById(R.id.shareRecipeBtn);
 
 
         if (login.allRecipes.get(id-1).isSaved) {
@@ -63,6 +64,10 @@ public class RecipePage extends AppCompatActivity {
             }
         });
 
+        shareBtn.setOnClickListener(e->{
+            SharePopup sharepopup = new SharePopup();
+            sharepopup.show(getSupportFragmentManager(), "Sharepopup");
+        });
 
         final ImageButton navHome = (ImageButton) findViewById(R.id.pageHomeBtn);
         navHome.setOnClickListener(new View.OnClickListener() {
