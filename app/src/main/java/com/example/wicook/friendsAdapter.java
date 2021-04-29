@@ -20,6 +20,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import static android.content.Context.WINDOW_SERVICE;
 
@@ -48,6 +49,17 @@ public class friendsAdapter extends ArrayAdapter<String> {
 
         ImageView friendImage = convertView.findViewById(R.id.friend_item_pic);
         friendImage.setImageResource(R.drawable.socialicon);
+
+        Button removeButton = convertView.findViewById(R.id.delete_friend_button);
+        removeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(parent.getContext(), deleteFriend.class);
+                intent.putExtra("pos", position);
+                intent.putExtra("name", friends.get(position));
+                parent.getContext().startActivity(intent);
+            }
+        });
 
         return convertView;
     }

@@ -7,6 +7,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,7 +23,7 @@ public class deleteFriend extends AppCompatActivity {
         int w = metrics.widthPixels;
         int h = metrics.heightPixels;
 
-        getWindow().setLayout((int) (w*.6), 600);
+        getWindow().setLayout((int) (w*.6), 770);
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;
@@ -31,8 +32,12 @@ public class deleteFriend extends AppCompatActivity {
 
         getWindow().setAttributes(params);
 
+        Intent intent = getIntent();
+
         Button cancelDelete = (Button) findViewById(R.id.cancel_delete);
         Button confirmRemove = (Button) findViewById(R.id.confirm_remove);
+        TextView name = (TextView) findViewById(R.id.delete_friend_name);
+        name.setText(intent.getStringExtra("name"));
 
         cancelDelete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,8 +49,8 @@ public class deleteFriend extends AppCompatActivity {
         confirmRemove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(deleteFriend.this, login.class);
-                startActivity(intent);
+                friends.adapter.remove(intent.getStringExtra("name"));
+                onBackPressed();
             }
         });
 

@@ -19,7 +19,6 @@ public class social extends AppCompatActivity {
             add("Hannah Williams");
             add("Tim Baker");
             add("Zach Bryan");
-
         }
     };
 

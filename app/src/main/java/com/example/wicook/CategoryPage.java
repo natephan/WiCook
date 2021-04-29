@@ -66,8 +66,7 @@ public class CategoryPage extends AppCompatActivity {
 
         final ImageButton backBtn = (ImageButton) findViewById(R.id.catPageBackBtn);
         backBtn.setOnClickListener(e->{
-            Intent intent = new Intent(CategoryPage.this, cookbook.class);
-            startActivity(intent);
+            onBackPressed();
         });
 
 

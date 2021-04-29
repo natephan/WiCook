@@ -1,6 +1,7 @@
 package com.example.wicook;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +42,9 @@ public class feedAdapter extends ArrayAdapter<String> {
         friendImage.setImageResource(R.drawable.socialicon);
 
         Button likeButton = (Button) convertView.findViewById(R.id.like_button);
+        Button viewButton = (Button) convertView.findViewById(R.id.view_button);
+        Button shareButton = (Button) convertView.findViewById(R.id.share_button);
+
         likeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +55,31 @@ public class feedAdapter extends ArrayAdapter<String> {
                 else {
                     likeButton.setText("Like");
                 }
+            }
+        });
+
+        viewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Recipe r = login.allRecipes.get(0);
+
+                Intent intent = new Intent(parent.getContext(), RecipePage.class);
+                intent.putExtra("R_NAME", r.getRecipeName());
+                intent.putExtra("R_DESC", r.getDescription());
+                intent.putExtra("R_INST", r.getInstructions());
+                intent.putExtra("R_INGR", r.getIngredients());
+                intent.putExtra("R_INFO", r.getInformation());
+                intent.putExtra("R_ID", r.id);
+                intent.putExtra("R_CLASS", "Explore");
+                parent.getContext().startActivity(intent);
+            }
+        });
+
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(parent.getContext(), shareSocial.class);
+                parent.getContext().startActivity(intent);
             }
         });
 

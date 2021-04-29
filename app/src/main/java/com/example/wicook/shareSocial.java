@@ -7,15 +7,15 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.SearchView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class addFriend extends AppCompatActivity {
+public class shareSocial extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_friend);
+        setContentView(R.layout.share_recipe_popup);
 
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -23,7 +23,7 @@ public class addFriend extends AppCompatActivity {
         int w = metrics.widthPixels;
         int h = metrics.heightPixels;
 
-        getWindow().setLayout(1050, 750);
+        getWindow().setLayout(800, 800);
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;
@@ -32,22 +32,21 @@ public class addFriend extends AppCompatActivity {
 
         getWindow().setAttributes(params);
 
-        Button cancelAdd = (Button) findViewById(R.id.cancel_add_friend);
-        Button addConfirm = (Button) findViewById(R.id.add_confirm);
+        Intent intent = getIntent();
 
-        SearchView search = (SearchView) findViewById(R.id.add_friend_name);
+        Button post = (Button) findViewById(R.id.postBtn);
+        Button copy = (Button) findViewById(R.id.copyLink);
 
-        cancelAdd.setOnClickListener(new View.OnClickListener() {
+        post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
 
-        addConfirm.setOnClickListener(new View.OnClickListener() {
+        copy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                friends.adapter.add(search.getQuery().toString());
                 onBackPressed();
             }
         });

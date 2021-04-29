@@ -25,7 +25,7 @@
             android:textAlignment="center"/>
 
         <SearchView
-            android:id="@+id/delete_friend_name"
+            android:id="@+id/add_friend_name"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

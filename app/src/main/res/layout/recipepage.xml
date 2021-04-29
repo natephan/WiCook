@@ -17,17 +17,33 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <TextView
-            android:id="@+id/recipeNamePage"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="65dp"
-            android:layout_marginBottom="25dp"
-            android:background="@color/regularPurple"
-            android:gravity="center"
-            android:text="Recipe Name"
+            android:orientation="horizontal"
+            android:background="@color/regularPurple">
 
-            android:textColor="@color/white"
-            android:textSize="30sp" />
+            <ImageButton
+                android:id="@+id/recipe_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/leftarrow"
+                android:background="@color/regularPurple"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/recipeNamePage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/regularPurple"
+                android:gravity="center"
+                android:text="Recipe Name"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="20dp"/>
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/recipeImgPage"

@@ -24,13 +24,15 @@ public class friends extends AppCompatActivity {
         }
     };
 
+    protected static friendsAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.friends);
 
         ListView friendsList = (ListView) findViewById(R.id.friends_list_view);
-        friendsAdapter adapter = new friendsAdapter(getApplicationContext(), friendNames);
+        adapter = new friendsAdapter(getApplicationContext(), friendNames);
         friendsList.setAdapter(adapter);
 
         ImageButton addFriend = (ImageButton) findViewById(R.id.add_friend_button);

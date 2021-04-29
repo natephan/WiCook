@@ -45,6 +45,8 @@ public class RecipePage extends AppCompatActivity {
         Button addBtn = (Button) findViewById(R.id.addRecipeBtn);
         Button shareBtn = (Button) findViewById(R.id.shareRecipeBtn);
 
+        ImageButton backButton = (ImageButton) findViewById(R.id.recipe_back_button);
+
 
         if (classInvoked.equals("CategoryPage")) {
             //addBtn.setBackgroundColor(0xFFBB86FC);
@@ -107,6 +109,12 @@ public class RecipePage extends AppCompatActivity {
             startActivity(intent);
         });
 
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
     }
 }
