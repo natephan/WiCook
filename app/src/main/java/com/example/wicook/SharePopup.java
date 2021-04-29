@@ -45,7 +45,7 @@ public class SharePopup extends DialogFragment implements View.OnClickListener {
         super.onResume();
         ViewGroup.LayoutParams params = getDialog().getWindow().getAttributes();
         params.width = 800;
-        params.height = 650;
+        params.height = 800;
         getDialog().getWindow().setAttributes((android.view.WindowManager.LayoutParams) params);
 
 
