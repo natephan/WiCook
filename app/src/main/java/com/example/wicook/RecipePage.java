@@ -56,7 +56,7 @@ public class RecipePage extends AppCompatActivity {
             addBtn.setOnClickListener(e->{
                 login.allRecipes.get(id-1).isSaved = false;
                 login.allRecipes.get(id-1).setCategory("");
-                Intent intent = new Intent(RecipePage.this, CategoryPage.class);
+                Intent intent = new Intent(RecipePage.this, cookbook.class);
                 intent.putExtra("CAT_NAME", catName);
                 startActivity(intent);
             });

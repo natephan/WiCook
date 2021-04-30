@@ -44,26 +44,27 @@ public class CategoryPage extends AppCompatActivity {
             adaptor = new RecipeAdaptor(getApplicationContext(), savedRecipes);
             listView = (ListView) findViewById(R.id.catPageListV);
             listView.setAdapter(adaptor);
+
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                    Recipe r = login.allRecipes.get(position);
+
+                    Intent intent = new Intent(CategoryPage.this, RecipePage.class);
+                    intent.putExtra("R_NAME", r.getRecipeName());
+                    intent.putExtra("R_DESC", r.getDescription());
+                    intent.putExtra("R_INST", r.getInstructions());
+                    intent.putExtra("R_INGR", r.getIngredients());
+                    intent.putExtra("R_INFO", r.getInformation());
+                    intent.putExtra("R_ID", r.id);
+                    intent.putExtra("R_CLASS", "CategoryPage");
+                    intent.putExtra("CAT_NAME", name);
+                    startActivity(intent);
+                }
+            });
         }
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                Recipe r = login.allRecipes.get(position);
-
-                Intent intent = new Intent(CategoryPage.this, RecipePage.class);
-                intent.putExtra("R_NAME", r.getRecipeName());
-                intent.putExtra("R_DESC", r.getDescription());
-                intent.putExtra("R_INST", r.getInstructions());
-                intent.putExtra("R_INGR", r.getIngredients());
-                intent.putExtra("R_INFO", r.getInformation());
-                intent.putExtra("R_ID", r.id);
-                intent.putExtra("R_CLASS", "CategoryPage");
-                intent.putExtra("CAT_NAME", name);
-                startActivity(intent);
-            }
-        });
 
         final ImageButton backBtn = (ImageButton) findViewById(R.id.catPageBackBtn);
         backBtn.setOnClickListener(e->{
