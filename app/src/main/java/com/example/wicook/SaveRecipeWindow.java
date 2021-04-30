@@ -69,6 +69,7 @@ public class SaveRecipeWindow extends AppCompatActivity {
                     intent.putExtra("R_INGR", r_ingr);
                     intent.putExtra("R_INFO", r_desc);
                     intent.putExtra("R_ID", id);
+                    intent.putExtra("R_CLASS", "SaveRecipeWindow");
                     login.allRecipes.get(id-1).isSaved = true;
                     startActivity(intent);
 

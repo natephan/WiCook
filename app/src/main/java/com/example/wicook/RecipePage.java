@@ -47,6 +47,7 @@ public class RecipePage extends AppCompatActivity {
 
         ImageButton backButton = (ImageButton) findViewById(R.id.recipe_back_button);
 
+        String catName = getIntent().getStringExtra("CAT_NAME");
 
         if (classInvoked.equals("CategoryPage")) {
             //addBtn.setBackgroundColor(0xFFBB86FC);
@@ -56,6 +57,7 @@ public class RecipePage extends AppCompatActivity {
                 login.allRecipes.get(id-1).isSaved = false;
                 login.allRecipes.get(id-1).setCategory("");
                 Intent intent = new Intent(RecipePage.this, CategoryPage.class);
+                intent.putExtra("CAT_NAME", catName);
                 startActivity(intent);
             });
 
@@ -64,7 +66,7 @@ public class RecipePage extends AppCompatActivity {
             addBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    addBtn.setText("SAVE");
+                    addBtn.setText("SAVED");
                     Intent intent = new Intent(RecipePage.this, SaveRecipeWindow.class);
                     intent.putExtra("R_ID", id);
                     intent.putExtra("R_NAME", r_name);

@@ -47,6 +47,7 @@ public class explore extends AppCompatActivity {
                 intent.putExtra("R_INFO", r.getInformation());
                 intent.putExtra("R_ID", r.id);
                 intent.putExtra("R_CLASS", "Explore");
+                intent.putExtra("CAT_NAME", r.getCategory());
                 startActivity(intent);
             }
         });
