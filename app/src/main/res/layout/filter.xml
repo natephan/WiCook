@@ -188,7 +188,7 @@
                     android:layout_width="250dp"
                     android:layout_height="45dp"
                     android:layout_marginTop="25dp"
-                    android:max="1000"
+                    android:max="999"
                     android:min="0"
                     android:progress="0"></SeekBar>
             </LinearLayout>

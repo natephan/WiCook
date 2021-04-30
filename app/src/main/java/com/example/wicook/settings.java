@@ -6,6 +6,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class settings extends AppCompatActivity {
 
@@ -28,6 +31,25 @@ public class settings extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(settings.this, deleteAccount.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView changeEmail = (TextView) findViewById(R.id.change_email);
+        TextView changePassword = (TextView) findViewById(R.id.change_password);
+
+        changeEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(settings.this, newEmail.class);
+                startActivity(intent);
+            }
+        });
+
+        changePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(settings.this, newPassword.class);
                 startActivity(intent);
             }
         });

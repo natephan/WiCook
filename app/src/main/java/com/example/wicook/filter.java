@@ -1,3 +1,7 @@
+/*
+ Source for adjusting edittext with seekbar
+ https://stackoverflow.com/questions/35863575/adjust-edittext-with-seekbar
+*/
 package com.example.wicook;
 
 import android.content.Intent;
@@ -18,10 +22,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Scanner;
 
 public class filter extends AppCompatActivity {
+    boolean changedText = false;
+    boolean changedSlider = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.filter);
+
+
 
         ImageButton backButton = (ImageButton) findViewById(R.id.filter_back);
         Button resetButton = (Button) findViewById(R.id.filter_reset);
@@ -42,7 +51,7 @@ public class filter extends AppCompatActivity {
 
         EditText servings = (EditText) findViewById(R.id.servings_box);
 
-        /*priceSeeker.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        priceSeeker.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int newProgress = 0;
             public void onProgressChanged(SeekBar priceBar, int progress, boolean user) {
                 newProgress = progress;
@@ -51,7 +60,13 @@ public class filter extends AppCompatActivity {
 
             }
             public void onStopTrackingTouch(SeekBar priceBar) {
-                priceText.setText("$" + Integer.toString(newProgress));
+                if (!changedSlider) {
+                    changedText = true;
+                    priceText.setText(Integer.toString(newProgress));
+                }
+                else {
+                    changedSlider = false;
+                }
             }
         });
 
@@ -64,7 +79,13 @@ public class filter extends AppCompatActivity {
 
             }
             public void onStopTrackingTouch(SeekBar calBar) {
-                calText.setText(Integer.toString(newProgress));
+                if (!changedSlider) {
+                    changedText = true;
+                    calText.setText(Integer.toString(newProgress));
+                }
+                else {
+                    changedSlider = false;
+                }
             }
         });
 
@@ -77,17 +98,20 @@ public class filter extends AppCompatActivity {
 
             }
             public void onStopTrackingTouch(SeekBar timeBar) {
-                timeText.setText(Integer.toString(newProgress));
+                if (!changedSlider) {
+                    changedText = true;
+                    timeText.setText(Integer.toString(newProgress));
+                }
+                else {
+                    changedSlider = false;
+                }
             }
         });
 
         priceText.addTextChangedListener(new TextWatcher() {
-            String oldText = "";
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                oldText = priceText.getText().toString();
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
             }
@@ -97,22 +121,21 @@ public class filter extends AppCompatActivity {
                 String newText = priceText.getText().toString();
                 int stringVal = stringToInteger(newText);
                 if (stringVal >= 0 && stringVal <= 100) {
-                    priceSeeker.setProgress(stringVal);
-                    priceText.setText("$" + newText);
-                }
-                else {
-                    priceText.setText(oldText);
+                    if (!changedText) {
+                        changedSlider = true;
+                        priceSeeker.setProgress(stringVal);
+                    }
+                    else {
+                        changedText = false;
+                    }
                 }
             }
         });
 
         calText.addTextChangedListener(new TextWatcher() {
-            String oldText = "";
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                oldText = calText.getText().toString();
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
             }
@@ -121,22 +144,22 @@ public class filter extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 String newText = calText.getText().toString();
                 int stringVal = stringToInteger(newText);
-                if (stringVal >= 0 && stringVal <= 1000) {
-                    calSeeker.setProgress(stringVal);
-                }
-                else {
-                    calText.setText(oldText);
+                if (stringVal >= 0 && stringVal <= 999) {
+                    if (!changedText) {
+                        changedSlider = true;
+                        calSeeker.setProgress(stringVal);
+                    }
+                    else {
+                        changedText = false;
+                    }
                 }
             }
         });
 
         timeText.addTextChangedListener(new TextWatcher() {
-            String oldText = "";
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                oldText = timeText.getText().toString();
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
             }
@@ -146,36 +169,49 @@ public class filter extends AppCompatActivity {
                 String newText = timeText.getText().toString();
                 int stringVal = stringToInteger(newText);
                 if (stringVal >= 0 && stringVal <= 1000) {
-                    timeSeeker.setProgress(stringVal);
-                }
-                else {
-                    timeText.setText(oldText);
+                    if (!changedText) {
+                        changedSlider = true;
+                        timeSeeker.setProgress(stringVal);
+                    }
+                    else {
+                        changedText = false;
+                    }
                 }
             }
-        }); */
+        });
 
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 keywords.setQuery("", false);
+                changedSlider = true;
                 keywords.clearFocus();
 
                 exclude.setQuery("", false);
+                changedSlider = true;
                 exclude.clearFocus();
 
                 allergies.setQuery("", false);
+                changedSlider = true;
                 allergies.clearFocus();
 
                 priceSeeker.setProgress(0);
+                changedText = true;
                 priceText.setText("0");
 
                 calSeeker.setProgress(0);
+                changedText = true;
                 calText.setText("0");
 
                 timeSeeker.setProgress(0);
+                changedText = true;
                 timeText.setText("0");
 
                 servings.setText("1");
+
+                changedText = false;
+                changedSlider = false;
+
             }
         });
 
